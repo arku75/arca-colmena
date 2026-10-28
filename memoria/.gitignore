@@ -1,0 +1,7 @@
+# El repositorio público no recibe memoria personal ni datos de ejecución.
+*.db
+*.db-*
+.locks/
+diario/
+MEMORIA.md
+propuestas/

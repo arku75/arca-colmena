@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "required": ["tareas"],
+  "properties": {
+    "tareas": {
+      "type": "array", "maxItems": 12,
+      "items": {
+        "type": "object",
+        "required": ["id", "descripcion", "modelo", "como_se_comprueba"],
+        "properties": {
+          "id": {"type": "integer"},
+          "descripcion": {"type": "string"},
+          "modelo": {"enum": ["router", "rapido", "cerebro", "critico"]},
+          "como_se_comprueba": {"type": "string"},
+          "depende_de": {"type": "array", "items": {"type": "integer"}}
+        }
+      }
+    },
+    "pregunta_a_ser": {"type": "string"}
+  }
+}

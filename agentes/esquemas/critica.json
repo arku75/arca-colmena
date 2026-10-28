@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "required": ["hallazgos", "descartadas"],
+  "properties": {
+    "hallazgos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["que", "donde", "evidencia_que_lo_confirmaria", "gravedad"],
+        "properties": {
+          "que": {"type": "string"},
+          "donde": {"type": "string"},
+          "evidencia_que_lo_confirmaria": {
+            "type": "string",
+            "description": "El comando exacto, el test, o la línea. Sin esto NO es un hallazgo."
+          },
+          "gravedad": {"enum": ["rompe", "riesgo", "mejora"]}
+        }
+      }
+    },
+    "descartadas": {
+      "type": "array",
+      "description": "Sospechas para las que NO pude nombrar evidencia. Van aquí, no en hallazgos.",
+      "items": {"type": "string"}
+    }
+  }
+}

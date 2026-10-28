@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "required": ["terminada", "porque"],
+  "properties": {
+    "terminada": {"type": "boolean"},
+    "porque": {"type": "string"},
+    "evidencia": {"type": "string", "description": "Qué lo demuestra. Obligatorio si terminada=true."},
+    "que_falta": {"type": "string", "description": "Una frase accionable. Obligatorio si terminada=false."},
+    "senales_objetivas_ignoradas": {"type": "array", "items": {"type": "string"}}
+  }
+}

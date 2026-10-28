@@ -1,0 +1,26 @@
+# Sin modelos ni accesos. No activa el orquestador histórico.
+[motor]
+url = "http://127.0.0.1:9292"
+timeout_s = 120
+reintentos = 3
+backoff_s = 1.5
+
+[modelos]
+cerebro = ""
+rapido = ""
+critico = ""
+router = ""
+embed = ""
+rerank = ""
+
+# Ejemplos heredados: revise cada límite para su entorno.
+[limites]
+vram_reservada_mib = 1024
+disco_minimo_gb = 80
+bateria_minima_pct = 40
+pasos_max_tarea = 40
+segundos_max_tarea = 3600
+repeticiones_max = 3
+
+# No incluya rutas personales ni credenciales en archivos públicos.
+# El registro de solicitudes queda apagado en CONFIG_DEF.

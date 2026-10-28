@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": ["hallazgos"],
+  "properties": {
+    "hallazgos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["hecho", "procedencia", "tipo"],
+        "properties": {
+          "hecho": {"type": "string"},
+          "procedencia": {"type": "string", "description": "fichero:línea o URL. Sin esto no vale."},
+          "tipo": {"enum": ["leido", "deducido"]}
+        }
+      }
+    },
+    "no_encontrado": {"type": "array", "items": {"type": "string"}}
+  }
+}
